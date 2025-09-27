@@ -4,4 +4,4 @@ Github repository for the paper titled as "Vision-Language Model Approach for Fe
 
 Mehmet Sergen Catal, Abdurrahman Gumus, Ozlem Karabiber Cura, Ocan Aydin, Mehmet Zübeyir Ünlü
 
-Codes and dataset will be available upon publication.
+Code will be available upon publication.
