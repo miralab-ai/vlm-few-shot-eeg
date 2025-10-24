@@ -47,7 +47,7 @@ The framework consists of three main stages:
 - Four features are combined into 448×448 featured images.
 
 ### 2. CLIP-Based Vision-Language Model
-![alt text](imagesimage-2.png)
+![alt text](images/image-2.png)
 - Pre-trained CLIP model processes images and text descriptions simultaneously.
 - Image encoder: Processes images. 
 - Text encoder: Processes natural language class descriptions.
