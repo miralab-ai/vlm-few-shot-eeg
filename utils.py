@@ -193,8 +193,5 @@ def prompt_eng(classname):
     elif classname == "abnormal brain activity": 
         prompt = "abnormal brain activity"
         #prompt = "children with Attention Deficit Hyperactivity Disorder, one of the most prevalent neuro-developmental diseases, has a variety of etiologies and manifests in childhood as hyperactivity, impulsivity, and/or inattention."
-
-        #prompt = "attention deficit hyperactivity disorder patient's brain activity"
-        #prompt = "abnormal brain activity which belong to children with Attention Deficit Hyperactivity Disorder"
     return prompt
 
