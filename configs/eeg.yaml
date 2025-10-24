@@ -1,5 +1,6 @@
 # ------ root_path/dataset_name ------
-root_path: '/home/sergen/code/Tip-Adapter/data'
+# You should put the root path of your dataset below.
+root_path: 'root_path/dataset_name'
 
 
 # ------ Load Cache and Features ------
@@ -10,7 +11,7 @@ load_pre_feat: False
 # load_pre_feat: True
 
 
-# ------ Hyperparamters ------
+# ------ Hyperparameters ------
 search_hp: True
 #search_hp: False
 
@@ -23,6 +24,8 @@ init_alpha: 1.17
 
 # ------ Basic Config ------
 dataset: 'eeg'
+# You should set the few-shot number that you want to evaluate here and also set in the "eeg.py" file.
+# The places where you should to change the few-shot number are specified in the eeg.py file.
 shots: 16
 #backbone: 'RN50'
 #backbone: 'RN101'
@@ -33,5 +36,5 @@ backbone: 'RN50x16'
 
 
 lr: 0.0001
-augment_epoch: 7
+augment_epoch: 7  # Augmentation is not used in our project.
 train_epoch: 20
