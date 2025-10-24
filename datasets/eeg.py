@@ -4,6 +4,8 @@ from collections import defaultdict
 from .utils import Datum, DatasetBase, write_json
 from .oxford_pets import OxfordPets
 
+
+# You can activate any of the single or multiple prompts listed below by uncommneting them. Be careful not to have more than one template active at a time.
 # Single Prompts
 
 #template = ['{}']
@@ -53,7 +55,7 @@ class EEG(DatasetBase):
     def __init__(self, root, num_shots):
         self.dataset_dir = os.path.join(root, self.dataset_dir)
         self.image_dir = os.path.join(self.dataset_dir)
-        self.split_path = os.path.join(self.dataset_dir, 'split_eeg_16shot.json')  # Changed filename to indicate shots
+        self.split_path = os.path.join(self.dataset_dir, 'split_eeg_16shot.json')  # Change filename to indicate shots
         self.template = template
 
         if not os.path.exists(self.split_path):
