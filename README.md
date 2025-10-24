@@ -33,7 +33,7 @@ Through the adaptation of pre-trained VLMs to neurophysiological data, this tech
 The framework consists of three main stages:
 
 ### 1. EEG Connectivity-Based Featured Image Generation
-![alt text](images\image-1.png)
+![alt text](images/image-1.png)
 - Raw EEG signals (30 channels, 1 kHz sampling) are preprocessed using ICA and band-pass filtering (0.5-48 Hz).
 - Six connectivity features are computed for all channel pairs:
   - **MSC** (Magnitude Squared Coherence)
@@ -43,18 +43,18 @@ The framework consists of three main stages:
   - **RE-Coef** (Cohentropy Coefficient)
   - **CE-Coef** (Correntropy Coefficient)
 - Connectivity matrices (30×30) are converted to 224×224 images using jet colormap.
-![alt text](images\image-5.png)
+![alt text](images/image-5.png)
 - Four features are combined into 448×448 featured images.
 
 ### 2. CLIP-Based Vision-Language Model
-![alt text](images\image-2.png)
+![alt text](imagesimage-2.png)
 - Pre-trained CLIP model processes images and text descriptions simultaneously.
 - Image encoder: Processes images. 
 - Text encoder: Processes natural language class descriptions.
 - Classification via cosine similarity between image and text embeddings.
 
 ### 3. Few-Shot Adaptation
-![alt text](images\image-4.png)
+![alt text](images/image-4.png)
 - **Tip-Adapter**: Training-free adaptation using key-value cache mechanism.
 - **Tip-Adapter-F**: Fine-tuned variant with learnable cache keys.
 - Hyperparameters optimized via grid search (α: residual ratio, β: affinity sharpness.)
@@ -83,7 +83,7 @@ The framework consists of three main stages:
 - Multiple prompts improved performance over single prompts
 
 #### 2. Backbone Architecture Comparison
-![alt text](images\image-6.png)
+![alt text](images/image-6.png)
 - **RN50x16**: Best overall performance across all shot configurations (768-dim embeddings)
 - **RN50**: Good balance between performance and computational efficiency
 
