@@ -54,7 +54,7 @@ The framework consists of three main stages:
 - Classification via cosine similarity between image and text embeddings.
 
 ### 3. Few-Shot Adaptation
-![alt text](images/Tip-Adapter_v1.png)
+![alt text](images/image-3.png)
 - **Tip-Adapter**: Training-free adaptation using key-value cache mechanism.
 - **Tip-Adapter-F**: Fine-tuned variant with learnable cache keys.
 - Hyperparameters optimized via grid search (α: residual ratio, β: affinity sharpness.)
