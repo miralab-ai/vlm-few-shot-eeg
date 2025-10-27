@@ -186,14 +186,14 @@ vlm-few-shot-eeg/
 ├── clip/
 │   ├── clip.py
 │   ├── __init__.py         
-│   ├── evaluation.py           
-│   └── visualization.py        
+│   ├── bpe_simple_vocab_16e6.txt.gz
+|   ├── simple_tokenizer.py          
+│   └── model.py         
 ├── dataset/
 │   ├── eeg.py                  
 │   ├── __init__.py  
-│   ├── model.py  
-|   |── bpe_simple_vocab_16e6.txt.gz
-│   └── simple_tokenizer.py        
+│   ├── oxford_pets.py
+│   └── utils.py      
 ├── data/                       # Place your connectivity-based images here
 │   ├── ADHD/
 │   └── HC/
