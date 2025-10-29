@@ -288,23 +288,12 @@ For questions, collaborations, or issues:
 
 ---
 
-## License
-
-You are free to:
-- **Share** — copy and redistribute the material
-- **Adapt** — remix, transform, and build upon the material
-
-Under the following terms:
-- **Attribution** — You must give appropriate credit and indicate if changes were made
-
----
-
 ## Acknowledgments
 
 - EEG data collection was approved by the Izmir Katip Celebi University Non-Invasive Clinical Research Ethics Committee (Decision No. 76, dated July 11, 2019).
 - We thank OpenAI for making CLIP models publicly available.
 - Built upon the [Tip-Adapter](https://github.com/gaopengcuhk/Tip-Adapter) framework by Zhang et al.
-- Public ADHD/HC EEG dataset provided by Motie Nasrabadi et al. via I[IEEE Dataport](https://dx.doi.org/10.21227/rzfh-zn36)
+- Public ADHD/HC EEG dataset provided by Motie Nasrabadi et al. via [IEEE Dataport](https://dx.doi.org/10.21227/rzfh-zn36)
 
 ---
 
@@ -318,7 +307,7 @@ Under the following terms:
 - Motie Nasrabadi et al., "EEG Data for ADHD/Control Children" - [IEEE Dataport](https://dx.doi.org/10.21227/rzfh-zn36)
 
 ### Useful Links
-- [Paper (IOP Publishing)](https://doi.org/10.1088/2632-2153/ae15e5)
+- [Our paper (IOP Publishing)](https://doi.org/10.1088/2632-2153/ae15e5)
 - [CLIP Official Repository](https://github.com/openai/CLIP)
 - [Tip-Adapter Official Repository](https://github.com/gaopengcuhk/Tip-Adapter)
 
