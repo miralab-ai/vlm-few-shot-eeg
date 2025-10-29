@@ -85,8 +85,6 @@ The framework consists of three main stages:
 #### 2. Backbone Architecture Comparison
 ![alt text](images/image-6.png)
 - **RN50x16**: Best overall performance across all shot configurations (768-dim embeddings)
-- **RN50**: Good balance between performance and computational efficiency
-
 
 ### 3. EEG Feature Combination Analysis
 - **Best Combination**: Covv + RE-Coef + CPSD + Corr → **94.80% accuracy** (16-shot)
@@ -131,7 +129,7 @@ git clone https://github.com/miralab-ai/vlm-few-shot-eeg.git
 cd vlm-few-shot-eeg
 
 # Create virtual environment
-conda create -n vlm-fes-shot-eeg python=3.8
+conda create -n vlm-few-shot-eeg python=3.8
 conda activate vlm-few-shot-eeg
 
 # Install dependencies
