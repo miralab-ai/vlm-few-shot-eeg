@@ -181,7 +181,7 @@ class EEG(DatasetBase):
     def __init__(self, root, num_shots):
         self.dataset_dir = os.path.join(root, self.dataset_dir)
         self.image_dir = os.path.join(self.dataset_dir)
-        self.split_path = os.path.join(self.dataset_dir, 'split_eeg_**16**shot.json')  # Change filename to indicate shots
+        self.split_path = os.path.join(self.dataset_dir, 'split_eeg_16shot.json')  # Change filename to indicate shots
         self.template = template
 
         if not os.path.exists(self.split_path):
@@ -189,7 +189,7 @@ class EEG(DatasetBase):
             # Set a random seed based on current timeS
             random.seed()  # This uses system time as seed
 
-            train, val, test = self._create_split(num_shots = **16**)  # Change shot number here
+            train, val, test = self._create_split(num_shots = 16)  # Change shot number here
             write_json({'train': train, 'val': val, 'test': test}, self.split_path)
             print(f"Created new split file: {self.split_path}")
 ...
