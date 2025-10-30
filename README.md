@@ -150,14 +150,14 @@ pip install -r requirements.txt
 The code expects preprocessed EEG connectivity-based featured images in the following structure:
 ```
 data/
-├── ADHD/
-│   ├── image_001.png
-│   ├── image_002.png
-│   └── ...
-└── HC/
-    ├── image_001.png
-    ├── image_002.png
-    └── ...
+  ├── eeg/ ├── 1/  # ADHD class
+           │   ├── image_001.png
+           │   ├── image_002.png
+           │   └── ...
+           └── 0/  # HC class
+               ├── image_001.png
+               ├── image_002.png
+               └── ...
 ```
 
 Each image should be a **448×448 pixel PNG file** representing combined EEG connectivity features.
@@ -166,12 +166,38 @@ Each image should be a **448×448 pixel PNG file** representing combined EEG con
 
 ### Running the Experiments
 
+# You should set the root path of your dataset in the configs/eeg.yaml.
+```bash
+root_path: 'rooth_path/of_your_data'
+```
+# You should set the few-shot number in configs/eeg.yaml. And change the following line accoring the few-shot number in datasets/eeg.py.
+
+...
+class EEG(DatasetBase):
+    dataset_dir = 'eeg'
+
+    def __init__(self, root, num_shots):
+        self.dataset_dir = os.path.join(root, self.dataset_dir)
+        self.image_dir = os.path.join(self.dataset_dir)
+        self.split_path = os.path.join(self.dataset_dir, 'split_eeg_**16**shot.json')  # Change filename to indicate shots
+        self.template = template
+
+        if not os.path.exists(self.split_path):
+
+            # Set a random seed based on current timeS
+            random.seed()  # This uses system time as seed
+
+            train, val, test = self._create_split(num_shots = **16**)  # Change shot number here
+            write_json({'train': train, 'val': val, 'test': test}, self.split_path)
+            print(f"Created new split file: {self.split_path}")
+...
+```
+
 #### Basic Usage
 ```bash
 # Run with default configuration
 python vlm-few-shot-eeg.py --config configs/eeg.yaml
 ```
-
 
 ---
 
@@ -193,8 +219,8 @@ vlm-few-shot-eeg/
 │   ├── oxford_pets.py
 │   └── utils.py      
 ├── data/                       # Place your connectivity-based images here
-│   ├── ADHD/
-│   └── HC/
+│   ├── eeg/ ├── 1/             # ADHD class
+│            └── 0/             # HC class
 ├── vlm-few-shot-eeg.py         # Main execution script
 |── util.py
 |── main.py
