@@ -166,12 +166,14 @@ Each image should be a **448×448 pixel PNG file** representing combined EEG con
 
 ### Running the Experiments
 
-# You should set the root path of your dataset in the configs/eeg.yaml.
+
 ```bash
+# You should set the root path of your dataset in the configs/eeg.yaml.
 root_path: 'rooth_path/of_your_data'
 ```
-# You should set the few-shot number in configs/eeg.yaml. And change the following line accoring the few-shot number in datasets/eeg.py.
 
+```bash
+# You should set the few-shot number in configs/eeg.yaml. And change the following line accoring the few-shot number in datasets/eeg.py.
 ...
 class EEG(DatasetBase):
     dataset_dir = 'eeg'
